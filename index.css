@@ -143,7 +143,7 @@ padding-left: 120px;
 }
 .tours-p, p, li, h3 {
     padding: 24px 24px 24px 20px;
-    margin-left: 50px;
+    /* margin-left: 50px; */
 }
 .tours-p button {
     width: 174px;
@@ -196,6 +196,42 @@ padding-left: 120px;
     gap: 20px;
     position: relative;
 }
+/* why choose us start */
+
+.row-hotel-map-img {
+    display: flex;
+    column-gap: 10px;
+    justify-content: space-evenly;
+    margin: 20px auto;
+padding-left: 20px;    
+}
+.hotel, .map, .price {
+    width: 573px;
+    height: 284px;
+    border-radius: 16px;
+    border-radius: 16px;
+    border: 1px solid rgba(251, 181, 99, 0.20);
+    background: rgba(251, 181, 99, 0.05);
+    padding: 10px;
+}
+.hotel img {
+border: 1px soli salmon;
+width: 64px;
+height: 64px;
+}
+.why-choose-us p {
+    margin: 10px 0px 0px 0px ;
+    padding: 0px;
+    text-align: left;
+}
+.price {
+  margin: 10px auto;
+}
+.why-choose-us > p {
+    text-align: center;
+    
+}
+
 
 /* footer section start  */
 .footer {
@@ -240,17 +276,23 @@ hr {
    
     .nav-bar {
         flex-direction: column;
+        padding: 0px;
+        justify-content: flex-end;
     }
     .banner {
         flex-direction: column;
+        width: 335px;
+       height: 483px;
+       flex-shrink: 0;
         
     }
     .banner h1 {
         font-size: 1.36rem;
-        margin-top: 10px;
+        margin: 5px;
     }
     .banner p {
         font-size: .866rem;
+        margin: 5px auto;
     }
     .input-btn {
         display: grid;
@@ -292,6 +334,10 @@ hr {
     height: 176px;
 
 }
+.choose-your-destination h1, p {
+    text-align: left;
+
+}
 .shilanka-north-kashmir {
     display: flex;
     flex-direction: column;
@@ -305,6 +351,22 @@ hr {
         height: 309px;
         margin-top: 110px;
     }
+    hr {
+        width: 335px;
+       height: 1px;
+    }
        
-
+/* why choose us */
+.row-hotel-map-img {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.hotel, .map, .price {
+    width: 335px;
+    height: 289px;
+}
+.price {
+    margin: 8px ;
+}
 }
