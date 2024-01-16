@@ -143,7 +143,7 @@ padding-left: 120px;
 }
 .tours-p, p, li, h3 {
     padding: 24px 24px 24px 20px;
-    /* margin-left: 50px; */
+    margin-left: 15px;
 }
 .tours-p button {
     width: 174px;
@@ -231,7 +231,62 @@ height: 64px;
     text-align: center;
     
 }
+/* news letter section start */
+.news-letter {
+    display: flex;
+    gap: 20px;
+    background: #FFF;
+    margin: 40px ;
 
+
+}
+.news-letter-subcription-box {
+    width: 474px;
+height: 422px;
+border-radius: 16px;
+border: 1px solid #FF5400;
+display: flex;
+flex-direction: column;
+padding: 10px 40px;
+align-items: flex-start;
+border-radius: 16px;
+}
+.news-letter-subcription-box p {
+    text-align: left;
+    width: 350px;
+    padding: 0px;
+    margin: 10px 0px 0px 0px;
+}
+.news-letter-subcription-box input {
+    width: 393px;
+    height: 52px;
+    padding: 16px 250px 16px 20px;
+    margin: 0px 0px 10px 0px;
+    background: rgba(19, 19, 24, 0.05);
+    border-radius: 8px;
+    border: none;
+}
+.news-letter-img {
+    width: 672px;
+height: 422px;
+border-radius: 16px;
+}
+.news-letter-subcription-box button {
+    width: 393px;
+height: 52px;
+border-radius: 8px;
+background: #FF5400;
+color: #FFF;
+text-align: center;
+font-size: 20px;
+font-weight: 800;
+border: none;
+margin-top: 20px;
+
+}
+
+
+/* news letter section end */
 
 /* footer section start  */
 .footer {
@@ -369,4 +424,19 @@ hr {
 .price {
     margin: 8px ;
 }
+.news-letter {
+    display: flex;
+    flex-direction: column;
+    justify-self: start;
+}
+/* .news-letter-subcription-box {
+    width: 288px;
+    height: 52px;
+
+}
+.news-letter-img {
+    width: 335px;
+ height: 300px;
+} */
+
 }
