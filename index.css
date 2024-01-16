@@ -27,6 +27,10 @@ body {
 }
 .Heading h2 {
     padding: 5px;
+    color: #131318;
+font-size: 2.25rem;
+font-weight: 800;
+
 }
 span {
     color: #FF5400;
@@ -38,6 +42,10 @@ span {
     width: 50%;
     display: flex;
     padding-right: 150px;
+    color: var(--Dark-02, #424247);
+text-align: center;
+font-size: 1.12rem;
+font-weight: 400;
     /* border: 2px solid blueviolet; */
 }
 .nav-bar li {
@@ -157,7 +165,18 @@ padding-left: 120px;
     font-weight: 800;
     margin: 50px;
 }
+.tours-p h3 {
+    color: #131318;
+font-size: 2.25rem;
+font-weight: 800;
+}
+.tours-p p, ul {
+    color: rgba(19, 19, 24, 0.70);
+font-size: 1rem;
+font-weight: 400;
+line-height: 26px; /* 162.5% */
 
+}
 /* Choose destination section  */
 
 .choose-your-destination h1, p {
@@ -166,6 +185,12 @@ padding-left: 120px;
 .choose-your-destination {
     margin: 26px 30px 50px 40px;
 } 
+.choose-your-destination h1 {
+    color: #131318;
+font-size: 2.25rem;
+font-weight: 800;
+}
+
 .heading {
     position: absolute;
     color: #FFF;
@@ -231,6 +256,21 @@ height: 64px;
     text-align: center;
     
 }
+.why-choose-us h1 {
+    color: #131318;
+text-align: center;
+font-family: Mulish;
+font-size: 40px;
+font-style: normal;
+font-weight: 800;
+line-height: normal;
+}
+.why-choose-us h5 {
+    color: #131318;
+font-size: 1.5rem;
+font-weight: 800;
+
+}
 /* news letter section start */
 .news-letter {
     display: flex;
@@ -270,6 +310,27 @@ border-radius: 16px;
     width: 672px;
 height: 422px;
 border-radius: 16px;
+ position: relative;
+}
+.roted {
+    width: 214.023px;
+height: 79.268px;
+transform: rotate(-19.628deg);
+border-radius: 10.569px;
+background: #FF5400;
+color: #FFF;
+font-family: Mulish;
+font-size: .9rem;
+font-style: normal;
+font-weight: 800;
+line-height: normal;
+position: absolute;
+    top: 71%;
+    width: 40%;
+    left: 58%;
+
+
+    
 }
 .news-letter-subcription-box button {
     width: 393px;
@@ -283,6 +344,11 @@ font-weight: 800;
 border: none;
 margin-top: 20px;
 
+}
+.news-letter hr {
+    width: 393px;
+     height: 1px;
+     margin-bottom: 25px;
 }
 
 
@@ -316,7 +382,7 @@ hr {
     background: rgba(19, 19, 24, 0.10);
     width: 872px;
     height: 1px;
-    margin: 60px auto;
+    margin: 60px auto 0px auto;
 }
 
 
@@ -374,7 +440,7 @@ hr {
     }
     .popular-tours {
         grid-template-columns: repeat(1, 1fr);
-        margin: 70px 20px;
+        /* margin: 70px 20px; */
 }
 .img img {
     width: 330px;
@@ -403,7 +469,7 @@ hr {
 }
     .footer {
         width: 375px;
-        height: 309px;
+        height: 380px;
         margin-top: 110px;
     }
     hr {
@@ -429,14 +495,66 @@ hr {
     flex-direction: column;
     justify-self: start;
 }
-/* .news-letter-subcription-box {
+.news-letter-img img {
+    width: 335px;
+   height: 300px;
+   margin: 20px 0px 50px 5px;
+} 
+.news-letter-subcription-box {
+    width: 370px;
+    height: 450px;
+}
+.news-letter-subcription-box input {
     width: 288px;
     height: 52px;
+    padding: 16px;
+}
+.news-letter-subcription-box button {
+    width: 288px;
+    height: 52px;
+}
+.news-letter hr {
+    width: 288px;
 
 }
-.news-letter-img {
-    width: 335px;
- height: 300px;
-} */
+.roted {
+    width: 210.023px;
+height: 79.268px;
+    top: 47%;
+    width: 40%;
+    left: 10%;
+}
+.why-choose-us p {
+    width: 309px;
+}
+.why-choose-us h1 {
+    text-align: left;
+    margin-left: 20px;
+}
+.popular-tours {
+    width: 340px;
+}
+.popular-tours  div {
+    margin-left: 5px;
 
+}
+.choose-your-destination p, h1 {
+    width: 310px;
+}
+.choose-your-destination img {
+    width: 335px;
+height: 176px;
+}
+.header {
+    flex-direction: column;
+
+}
+.img img {
+    width: 335px;
+height: 342px;
+}
+.maldies-indo div {
+    width: -10%;
+    height: -100%;
+}
 }
