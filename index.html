@@ -1,174 +1,560 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Himchori Travel</title>
-    <link rel="stylesheet" href="index.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@800&family=Merriweather:wght@900&family=Mulish:wght@400;600;700;800&family=Open+Sans:wght@800&family=Work+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/522f7dbcea.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@800&family=Merriweather:wght@900&family=Mulish:wght@400;600;800&family=Open+Sans:wght@800&family=Work+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="stylesheet" href="index.css" />
+    
+    
+   <!-- Google Fonts (Consolidated) -->
+<link
+href="https://fonts.googleapis.com/css2?family=Inter:wght@800&family=Merriweather:wght@900&family=Mulish:wght@400;600;700;800&family=Open+Sans:wght@800&family=Work+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap"
+rel="stylesheet"
+/>
+
+<!-- Font Awesome (Use Only One) -->
+<script src="https://kit.fontawesome.com/522f7dbcea.js" crossorigin="anonymous"></script>
+
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- Tailwind Configuration -->
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: {
+        mulish: ['Mulish', 'sans-serif'],
+      },
+    },
+  },
+};
+</script>
+
+    
+  </head>
+  <body class="max-w-[1180px] mx-auto">
     <!-- Header section -->
-    <header class="header">
-        <div class="Heading">
-            <img src="Images/Group 40071 (2).png" alt="">
-            <H2>Himchori <span>Travel</span></H2>
-        </div>
-        <nav class="nav-bar">
-            <li><span>Home</span></li>
-            <li>Packages</li>
-            <li>Testimonial</li>
-            <li>Blog</li>
-            <li>Contact</li>
-        </nav>
+    <header
+      class="flex items-center justify-between px-6 py-4 bg-white md:mb-8"
+    >
+      <div class="flex items-center">
+        <img
+          src="Images/Group 40071 (2).png"
+          alt="Himchori Travel Logo"
+          class="w-12 h-12"
+        />
+        <h2 class="text-xl md:text-[36px] font-bold ml-4">
+          Himchori <span class="text-orange-500">Travel</span>
+        </h2>
+      </div> 
+      <nav class="flex items-center">
+        <ul class="hidden md:flex space-x-6">
+          <li>
+            <a
+              href="#"
+              class="text-gray-700 font-semibold hover:text-orange-500"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-gray-700 font-semibold hover:text-orange-500"
+              >Packages</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-gray-700 font-semibold hover:text-orange-500"
+              >Testimonial</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-gray-700 font-semibold hover:text-orange-500"
+              >Blog</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-gray-700 font-semibold hover:text-orange-500"
+              >Contact</a
+            >
+          </li>
+        </ul>
+        <!-- Menu Button for Opening Sidebar -->
+        <button id="open-sidebar-btn" class="text-gray-700 md:hidden p-2">
+          ☰
+        </button>
+
+        <!-- Close Button for Sidebar -->
+        <button
+          id="close-sidebar-btn"
+          class="absolute top-[24px] right-[22px] text-xl text-black hidden"
+        >
+          ✖
+        </button>
+      </nav>
     </header>
+
+    <!-- Sidebar -->
+    <div
+      id="left-sidebar"
+      class="hidden fixed top-0 left-0 h-84 w-64 bg-white shadow-lg transform -translate-x-full transition-transform duration-300 z-10 absolute"
+    >
+      <div class="flex items-center justify-start p-4">
+        <img
+          src="Images/Group 40071 (2).png"
+          alt="Himchori Travel Logo"
+          class="w-12 h-12"
+        />
+        <h2 class="text-xl font-bold ml-3">
+          Himchori <span class="text-orange-500">Travel</span>
+        </h2>
+      </div>
+      <ul class="flex flex-col items-start space-y-4 py-6 px-4">
+        <li>
+          <a href="#" class="text-gray-700 font-semibold hover:text-orange-500"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a href="#" class="text-gray-700 font-semibold hover:text-orange-500"
+            >Packages</a
+          >
+        </li>
+        <li>
+          <a href="#" class="text-gray-700 font-semibold hover:text-orange-500"
+            >Testimonial</a
+          >
+        </li>
+        <li>
+          <a href="#" class="text-gray-700 font-semibold hover:text-orange-500"
+            >Blog</a
+          >
+        </li>
+        <li>
+          <a href="#" class="text-gray-700 font-semibold hover:text-orange-500"
+            >Contact</a
+          >
+        </li>
+      </ul>
+    </div>
+
     <!-- banner section  -->
-    <section>
-        <div class="banner">
-           <h1>Explore Your Travel</h1>
-           <p>Dolor sit amet consectetur. Nullam suspendisse vitae ultricies dolor adipiscing.
-             <br>In et odio
-            enim ac quis sapien urna eu phasellus.
-           </p>
-            <div class="input-btn">
-            <input type="text" placeholder="Where go">
-            <div class="fram">
-                <input type="text" placeholder="When">
-                <div><img src="Images/Frame.png" alt=""></div>
-            </div>
-            <div class="fram">
-                <input type="text" placeholder="Select Type">
-                <div><img src="Images/Frame.png" alt=""></div>
-                
-            </div>
-            <div class="search">
-                <div><img src="Images/search.png" alt=""></div>
-                <Button>Find Now</Button>
-                </div>
-        
-           </div>
+    <section class="container mx-auto rounded-xl">
+      <div class="relative md:h-[500px] h-[480px] mx-4 md:mx-6">
+        <!-- Background Image -->
+        <div
+          class="absolute inset-0 bg-cover bg-center rounded-xl"
+          style="background-image: url('Images/Group 13.png');"
+        ></div>
+    
+        <!-- Black Overlay with Opacity -->
+        <div class="absolute inset-0 bg-gradient-to-b from-black/20 to-black/0 rounded-xl"></div>
+    
+        <!-- Content Container -->
+        <div class="absolute inset-0 flex flex-col items-center justify-center px-4 md:px-0">
+          <!-- Heading -->
+          <h1 class="text-white font-mulish text-[22px] md:text-6xl font-extrabold text-center leading-tight md:leading-[80px]">
+            Explore Your Travel
+          </h1>
+    
+          <!-- Description -->
+          <p class="text-white mt-4 mb-8 text-sm md:text-base text-center max-w-[600px]">
+            Embark on an unforgettable journey and discover breathtaking destinations. From vibrant cities to serene landscapes, explore travel now!
+          </p>
+    
+          <!-- Search Form -->
+          <div class="w-full max-w-[800px] bg-white/10 backdrop-blur-sm rounded-xl p-4 md:p-6">
+            <div class="flex flex-col md:grid md:grid-cols-4 gap-4">
+  <!-- Where to go -->
+  <select id="destination" class="w-full md:w-36 lg:w-40 px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500">
+    <option value="" disabled selected>Where to go</option>
+    <option value="Bangladesh">Bangladesh</option>
+    <option value="Maldives">Maldives</option>
+    <option value="Indonesia">Indonesia</option>
+    <option value="Sri Lanka">Sri Lanka</option>
+    <option value="North America">North America</option>
+    <option value="Kashmir">Kashmir</option>
+    <option value="Bandarban">Bandarban</option>
+  </select>
+
+  <!-- When -->
+  <select id="travelTime" class="w-full md:w-36 lg:w-40 px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500">
+    <option value="" disabled selected>When</option>
+    <option value="spring">Spring</option>
+    <option value="summer">Summer</option>
+    <option value="fall">Fall</option>
+    <option value="winter">Winter</option>
+  </select>
+
+  <!-- Select Type -->
+  <select id="travelType" class="w-full md:w-36 lg:w-40 px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500">
+    <option value="" disabled selected>Select Type</option>
+    <option value="Adventure">Adventure</option>
+    <option value="Honeymoon">Honeymoon</option>
+    <option value="Cultural">Cultural</option>
+    <option value="Business">Business</option>
+  </select>
+
+  <!-- Search Button -->
+  <button onclick="searchFunction()" class="w-full md:w-auto flex items-center justify-center gap-2 bg-[#FF5400] px-4 py-2 rounded-md text-white font-bold hover:bg-orange-600 transition duration-300">
+    <img src="Images/search.png" alt="search icon" class="w-6 h-6" />
+    <span>Find Now</span>
+  </button>
+</div>
+          </div>
         </div>
+      </div>
     </section>
     <!-- our popular tours  -->
-    <div class="popular-tours">
-        <div class="tours-p">
-            <h3>Our Popular Tours</h3>
-            <p>Dolor sit amet consectetur. 
-                Diam volutpat neque habitasse pharetra odio sit massa. 
-                Sodales dictumst nec nibh pellentesque.</p>
-            <ul> <li> Tempus euismod lacus mauris dignissim quis in ultrices. 
-                Magna nullam odio neque diam. Sociis erat at .</li>
-                <li>Adipiscing ornare pellentesque mauris volutpat tortor vitae platea porta lacus. 
-                    Lectus suspendisse nullam.</li>
-                    <li> Accumsan eget et turpis praesent lorem egestas enim elit bibendum. Risus at in.</li>
-            </ul>
-
-            <p>Amet consectetur. Vulputate commodo felis molestie risus 
-                ornare nulla amet et. Libero commodo sagittis dignissim adipiscing quis. 
-                Habitant adipiscing risus natoque aliquet.
-                 Id bibendum nunc senectus semper tincidunt. </p>
-                 <button>Read More</button>
-        </div>
-        <div class="img">
-<img src="Images/Rectangle 4.png" alt="">
-        </div>
+   <section class="my-6 md:my-12 lg:my-[100px] mx-4 md:mx-6">
+    <div class="flex flex-col lg:flex-row justify-between items-center lg:gap-[52px] md:gap-8 gap-4 lg:h-[550px]">
+      <!-- Left Column: Text Content -->
+      <div class="lg:max-w-[577px] w-full">
+        <h3 class="font-mulish font-extrabold text-3xl md:text-basexl lg:text-[40px] leading-tight md:leading-12 text-left">
+          Our Popular Tours
+        </h3>
+        <p class="font-mulish font-normal text-base leading-6 text-left text-[#131318B3] lg:my-4 my-2">
+          Dolor sit amet consectetur. Diam volutpat neque habitasse pharetra odio sit massa. Sodales dictumst nec nibh pellentesque.
+        </p>
+    
+        
+          <li class=" font-mulish font-normal text-base leading-6 text-left text-[#131318B3]">
+            Tempus euismod lacus mauris dignissim quis in ultrices. Magna nullam odio neque diam. Sociis erat at.
+          </li>
+          <li class=" font-mulish font-normal text-base leading-6 text-left text-[#131318B3] md:py-4 py-2">
+            Adipiscing ornare pellentesque mauris volutpat tortor vitae platea porta lacus. Lectus suspendisse nullam.
+          </li>
+          <li class="font-mulish font-normal text-base leading-6 text-left text-[#131318B3]">
+            Accumsan eget et turpis praesent lorem egestas enim elit bibendum. Risus at in.
+          </li>
+      
+    
+        <p class="font-normal text-base leading-6 text-left text-[#5A5A5D] lg:my-4 my-4">
+          Amet consectetur. Vulputate commodo felis molestie risus ornare nulla amet et. Libero commodo sagittis dignissim adipiscing quis. Habitant adipiscing risus natoque aliquet. Id bibendum nunc senectus semper tincidunt.
+        </p>
+        <button class="mt-2 px-6 py-3 md:px-[36px] md:py-4 rounded-lg font-mulish font-bold text-lg md:text-[20px] leading-6 text-center bg-[#FF5400] text-white hover:bg-orange-600 transition duration-300">
+          Read More
+        </button>
+      </div>
+    
+      <!-- Right Column: Image -->
+      <div class="lg:max-w-[540px] w-full md:mt-8 lg:mt-0 mt-2">
+        <img src="Images/Rectangle 4.png" alt="Popular Tours" class="w-full h-auto rounded-lg shadow-lg" />
+      </div>
     </div>
-    <section>
-    <div class="choose-your-destination">
-        <h1>Choose Your Destination</h1>
-        <p>Dolor sit amet consectetur. Diam volutpat neque habitasse pharetra odio sit massa.
-            Sodales dictumst nec nibh pellentesque.</p>
-        <div class="maldies-indo">
-            <div><img src="Images/Rectangle 5.png" alt=""></div>
-            <div><img src="Images/Rectangle 8.png" alt=""></div>
-            <h6 class="heading">Maldives</h6>
-        </div>
-        <div class="shilanka-north-kashmir">
-            <div><img src="Images/Rectangle 6.png" alt=""></div>
-            <div><img src="Images/Rectangle 7.png" alt=""></div>
-            <div><img src="Images/Rectangle 9.png" alt=""></div>
-        </div>
-        <div class="bangladesh-bandarban">
-            <div><img src="Images/Rectangle 11.png" alt=""></div>
-            <div><img src="Images/Rectangle 10.png" alt=""></div>
-            <h6 class="heading">Bangladesh</h6>
-        </div>
-    </div>
-</section>
-<!-- why we choose us section  -->
-<section class="why-choose-us">
-    <h1>Why Choose Us</h1>
-    <p>Dolor sit amet consectetur. Diam volutpat neque habitasse pharetra odio sit massa.
-        Sodales dictumst nec nibh pellentesque.</p>
-        <div class="row-hotel-map-img">
-            <div class="hotel">
-                <div><img src="Images/hotel 1.png" alt=""></div>
-                <h5>Handpicked Hotels</h5>
-                <p>Amet consectetur. Vulputate commodo felis molestie risus  ornare nulla amet et. 
-                Libero commodo sagittis dignissim adipiscing quis. 
-                Habitant adipiscing risus natoque aliquet. </p>
-            </div>
-        <div class="map">
-            <img src="Images/map 1.png" alt="">
-            <h5>World Class Service</h5>
-            <p>Amet consectetur. Vulputate commodo felis molestie risus  ornare nulla amet et.
-                 Libero commodo sagittis dignissim adipiscing quis. 
-                Habitant adipiscing risus natoque aliquet. </p>
-        </div>
-    </div>
-
-        <div class="price">
-
-            <img src="Images/price-tag 1.png" alt="">
-            <h5>Best Price Guarantee</h5>
-            <p>Amet consectetur. Vulputate commodo felis molestie risus  
-                ornare nulla amet et. Libero commodo sagittis dignissim 
-                adipiscing quis. 
-                Habitant adipiscing risus natoque aliquet. <p>
-        </div>
-</section>
-
-<!-- newsletter section -->
-<section>
-    <div class="news-letter">
-          <div class="news-letter-subcription-box">
-            <h2>Newsletter</h2>
-            <p>Get your daily dose of travel news & tips.
-             Sign up today!</p>
-             <hr>
-                <input type="text" placeholder="Enter your name">
-                <input type="text" placeholder="Enter your email">
-                <button>Subscribe</button>
+   </section class="mx-4 md:mx-6">
+   <!-- Choose your destination  -->
+    <section class="mx-4 md:mx-6">
+      <div class="choose-your-destination">
+        <h1 class=" text-xl md:text-3xl lg:text-[40px] font-extrabold leading-[50px] tracking-normal text-center text-[#131318] font-mulish">Choose Your Destination</h1>
+        <p class="text-base text-[#131318B3] text-center font-mulish md:mt-6 mt-2">
+          Dolor sit amet consectetur. Diam volutpat neque habitasse pharetra
+          odio sit massa. <br>Sodales dictumst nec nibh pellentesque.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mt-12 font-mulish font-extrabold md:font-black text-xl md:text-6 lg:text-[28px] leading-[35px] tracking-normal text-center text-white">
+          <div class="relative">
+            <h1 class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">Maldies</h1>
+            <img src="Images/Rectangle 5.png" alt="" class="w-full h-[176px] h-auto object-cover">
           </div>
-        <div class="news-letter-img">
-          <div><img src="Images/Rectangle 8 (1).png" alt=""></div>
-          <div class="roted"><h3>Travel.com <br><span style="color: white; font-size: 1.2rem;">Save up to 70%</span></h3></div>
+          <div class="relative">
+            <h1 class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">Indonesia</h1>
+            <img src="Images/Rectangle 8.png" alt="" class="w-full h-[176px] h-auto object-cover">
+          </div>
         </div>
-    </div>
-</section>
-<!-- footer section  -->
-<footer class="footer">
-    <div class="foot">
-        <img src="Images/Group 40071 (2).png" alt="">
-        <H2 style="padding-left: 50px;"> Himchori <span>Travel</span></H2>
-    </div>
-    <p>orem ipsum dolor sit amet consectetur. Nulla sit viverra morbi vitae blandit orci potenti vulputate.
-       <br> erat maecenas vitae elementum ultricies nullam. </p>
-        <div class="social-icon">
-            <i class="fa-brands fa-twitter"></i>
-            <i class="fa-brands fa-facebook-f"></i>
-            <i class="fa-brands fa-instagram"></i>
+        
+        
+        <div class="max-w-[1180px] mx-auto grid grid-cols-1 md:flex md:flex-row  md:flex-nowrap gap-4 lg:gap-6 justify-center md:mt-6 mt-4 font-mulish font-extrabold md:font-black text-xl md:text-6 lg:text-[28px] leading-[35px] tracking-normal text-center text-white">
+          <div class="w-full md:w-[32%] lg:w-[30%] relative">
+            <img src="Images/Rectangle 6.png" alt="" class="w-full h-[176px] md:h-[288px] object-cover rounded-lg">
+            <h1 class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">Srilanka</h1>
+          </div>
+          <div class="w-full md:w-[42%] lg:w-[40%] relative">
+            <img src="Images/Rectangle 7.png" alt="" class="w-full h-[176px] md:h-[288px] object-cover rounded-lg">
+            <h1 class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">North America</h1>
+          </div>
+          <div class="w-full md:w-[26%] lg:w-[25%] relative">
+            <img src="Images/Rectangle 9.png" alt="" class="w-full h-[176px] md:h-[288px] object-cover rounded-lg md:mb-2">
+            <h1 class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">Kashmir</h1>
+          </div>
         </div>
-        <hr>
-        <p>2017, All Rights Reserved.</p>
+        
+        
+        
+        <div class="max-w-[1180px] mx-auto grid grid-cols-1 gap-4 md:flex md:flex-row flex-nowrap md:flex-nowrap lg:gap-6 justify-center mt-[12px] font-mulish font-extrabold md:font-black text-xl md:text-6 lg:text-[28px] leading-[35px] tracking-normal text-center text-white">
+          <div class="w-full md:w-[40%] lg:w-[40%] relative">
+            <img src="Images/Rectangle 10.png" alt="" class="w-full h-[176px] md:h-[300px] object-cover rounded-lg">
+            <h1 class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">Bangladesh</h1>
+          </div>
+          <div class="w-full md:w-[57%] lg:w-[57%] relative">
+            <img src="Images/Rectangle 11.png" alt="" class="w-full h-[176px] md:h-[300px] object-cover rounded-lg">
+            <h1 class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">Bandarban</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- why we choose us section  -->
+    <section class="why-choose-us mx-4 md:mx-6 lg:mt-20">
+      <h1 class="text-[rgb(19,19,24)] font-mulish text-[20px] md:text-[32px] lg:text-[40px] font-black leading-[25px] tracking-[0%] text-center mt-6"
+      >Why Choose Us</h1>
+      <p class="text-[rgb(19,19,24)] font-mulish text-[14px] leading-[20px] tracking-[0%] text-center my-4">
+        Dolor sit amet consectetur. Diam volutpat neque habitasse pharetra odio
+        sit massa. Sodales dictumst nec nibh pellentesque.
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mt-6">
+        <div class="hotel box-border border-[#FBB5630D] rounded-[16px] bg-[#FBB56333] p-8">
+          <div><img src="Images/hotel 1.png" alt="" /></div>
+          <h5 class="text-xl font-extrabold text-left leading-[25px] my-4">Handpicked Hotels</h5>
+          <p class="text-[14px] leading-[20px] tracking-[0%] text-left text-[#5A5A5D]">
+            Amet consectetur. Vulputate commodo felis molestie risus ornare
+            nulla amet et. Libero commodo sagittis dignissim adipiscing quis.
+            Habitant adipiscing risus natoque aliquet.
+          </p>
+        </div>
+        <div class="border-[#29CEF60D] rounded-[16px] bg-[#29CEF633] p-8 border-[1px] mx-auto">
+          <img src="Images/map 1.png" alt="" />
+          <h5 class="text-xl font-extrabold text-left leading-[25px] my-4">World Class Service</h5>
+          <p class="text-[14px] leading-[20px] tracking-[0%] text-left text-[#5A5A5D]">
+            Amet consectetur. Vulputate commodo felis molestie risus ornare
+            nulla amet et. Libero commodo sagittis dignissim adipiscing quis.
+            Habitant adipiscing risus natoque aliquet.
+          </p>
+        </div>
+      </div>
 
-</footer>
-</body>
+      <div class="flex justify-center items-center md:w-1/2 mx-auto"><div class="price box-border border-[1px] border-[#E944440D] rounded-[16px] bg-[#E9444433] p-8 my-4">
+        <img src="Images/price-tag 1.png" alt="" />
+        <h5 class="text-xl font-extrabold text-left leading-[25px] my-4">Best Price Guarantee</h5>
+        <p class="text-[14px] leading-[20px] tracking-[0%] text-left text-[#5A5A5D]">
+          Amet consectetur. Vulputate commodo felis molestie risus ornare nulla
+          amet et. Libero commodo sagittis dignissim adipiscing quis. Habitant
+          adipiscing risus natoque aliquet.
+        </p>
+      </div></div>
+    </section>
+    
+    <!-- deal and discount  -->
+    <section class="mx-4 md:mx-6 md:my-12 lg:my-20">
+    <h1 class="text-[20px] font-black text-left leading-[25px] text-center md:font-black lg:text-[40px] md:text-[32px] md:leading-12">Deal & Discounts</h1>
+    <p class="text-[14px] leading-[20px] tracking-[0%] text-left text-[#5A5A5D] my-4 text-base md:my-6 text-center">Sit amet consectetur. Diam volutpat neque habitasse pharetra odio sit massa. Sodales dictumst nec nibh pellentesque.</p>
+    <div class="">
+      <div class="w-full relative">
+        <img src="Images/Group 39.png" alt="" class="h-[500px] w-full object-cover rounded-lg">
+        <div class="absolute w-[300px] border-2 border-white rounded-[16px] backdrop-blur-sm bg-white/80 
+        bottom-4 mx-auto left-4 right-4 sm:bottom-4 sm:right-4 sm:left-auto
+        md:w-[500px] md:h-[320px]  
+        lg:w-[580px]  lg::top-[56px] md:bottom-[56px] md:right-[56px] md:left-auto md:py-12 md:px-12 p-4 ">
+          <div class="">
+           <div class="flex flex-col md:flex-row md:items-center md:gap-6 gap-2"> 
+           <div class="flex"> 
+            <img src="Images/clock.png" alt="clock icon"> 
+            <span class="text-base leading-[20px] text-left text-[#5A5A5D]">7 Day / 6 Night</span>
+          </div>
+          <div class="flex md:gap-6 gap-4"> 
+            <div class="flex gap-2">
+              <img src="Images/Frame.png" alt="group people icon" class="w-[18px] h-[18px]">
+              <p class="text-base leading-[20px] text-left text-[#5A5A5D]">Max : 10</p>
+            </div>
+            <div class="flex gap-2 items-center">
+              <img src="Images/location.png" alt="location icon" class="w-4 h-5">
+              <p class="text-base leading-[20px] text-left text-[#5A5A5D]">Indonesia</p>
+            </div>
+          </div>
+          </div>
+            <p class="text-[20px] md:text-[24px] font-black leading-[24px] my-4">Tour To Satorini</p>
+            <p class="mb-4 text-[14px] leading-[24px] text-[#5A5A5D] pl-2">Amet consectetur. Vulputate commodo felis 
+              molestie risus  ornare nulla amet et. Libero commodo sagittis dignissim</p>
+            <p class="text-base font-black text-[#FF5400]">Price: $1300-$1500</p>
+            <button class="text-[#FFFFFF] font-black text-[20px] px-5 py-2 bg-[#FF5400] rounded-lg mt-6 w-[170px] h-[52px]">BOOK NOW</button>
+          </div>
+        </div>
+      </div>
+      <!-- image 02  -->
+      <div class="w-full relative my-4 md:my-6 lg:my-12">
+        <img src="Images/Group 39.png" alt="" class="h-[500px] w-full object-cover rounded-lg">
+        <div class="absolute w-[300px] border-2 border-white rounded-[16px] backdrop-blur-sm bg-white/80 
+        bottom-4 mx-auto left-4 right-4 sm:bottom-4 sm:right-4 sm:left-auto
+        md:w-[500px] md:h-[320px]  
+        lg:w-[580px]  lg::top-[56px] md:bottom-[56px] md:left-[56px] md:right-auto md:py-12 md:px-12 p-4 ">
+          <div class="">
+           <div class="flex flex-col md:flex-row md:items-center md:gap-6 gap-2"> 
+           <div class="flex"> 
+            <img src="Images/clock.png" alt="clock icon"> 
+            <span class="text-base leading-[20px] text-left text-[#5A5A5D]">7 Day / 6 Night</span>
+          </div>
+          <div class="flex md:gap-6 gap-4"> 
+            <div class="flex gap-2">
+              <img src="Images/Frame.png" alt="group people icon" class="w-[18px] h-[18px]">
+              <p class="text-base leading-[20px] text-left text-[#5A5A5D]">Max : 10</p>
+            </div>
+            <div class="flex gap-2 items-center">
+              <img src="Images/location.png" alt="location icon" class="w-4 h-5">
+              <p class="text-base leading-[20px] text-left text-[#5A5A5D]">Indonesia</p>
+            </div>
+          </div>
+          </div>
+            <p class="text-[20px] md:text-[24px] font-black leading-[24px] my-4">Tour To Satorini</p>
+            <p class="mb-4 text-[14px] leading-[24px] text-[#5A5A5D] pl-2">Amet consectetur. Vulputate commodo felis 
+              molestie risus  ornare nulla amet et. Libero commodo sagittis dignissim</p>
+            <p class="text-base font-black text-[#FF5400]">Price: $1300-$1500</p>
+            <button class="text-[#FFFFFF] font-black text-[20px] px-5 py-2 bg-[#FF5400] rounded-lg mt-6 w-[170px] h-[52px]">BOOK NOW</button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- image 03 -->
+      <div class="w-full relative">
+        <img src="Images/Group 39.png" alt="" class="h-[500px] w-full object-cover rounded-lg">
+        <div class="absolute w-[300px] border-2 border-white rounded-[16px] backdrop-blur-sm bg-white/80 
+        bottom-4 mx-auto left-4 right-4 sm:bottom-4 sm:right-4 sm:left-auto
+        md:w-[500px] md:h-[320px]  
+        lg:w-[580px]  lg::top-[56px] md:bottom-[56px] md:right-[56px] md:left-auto md:py-12 md:px-12 p-4 ">
+          <div class="">
+           <div class="flex flex-col md:flex-row md:items-center md:gap-6 gap-2"> 
+           <div class="flex"> 
+            <img src="Images/clock.png" alt="clock icon"> 
+            <span class="text-base leading-[20px] text-left text-[#5A5A5D]">7 Day / 6 Night</span>
+          </div>
+          <div class="flex md:gap-6 gap-4"> 
+            <div class="flex gap-2">
+              <img src="Images/Frame.png" alt="group people icon" class="w-[18px] h-[18px]">
+              <p class="text-base leading-[20px] text-left text-[#5A5A5D]">Max : 10</p>
+            </div>
+            <div class="flex gap-2 items-center">
+              <img src="Images/location.png" alt="location icon" class="w-4 h-5">
+              <p class="text-base leading-[20px] text-left text-[#5A5A5D]">Indonesia</p>
+            </div>
+          </div>
+          </div>
+            <p class="text-[20px] md:text-[24px] font-black leading-[24px] my-4">Tour To Satorini</p>
+            <p class="mb-4 text-[14px] leading-[24px] text-[#5A5A5D] pl-2">Amet consectetur. Vulputate commodo felis 
+              molestie risus  ornare nulla amet et. Libero commodo sagittis dignissim</p>
+            <p class="text-base font-black text-[#FF5400]">Price: $1300-$1500</p>
+            <button class="text-[#FFFFFF] font-black text-[20px] px-5 py-2 bg-[#FF5400] rounded-lg mt-6 w-[170px] h-[52px]">BOOK NOW</button>
+          </div>
+        </div>
+      </div>
+
+   </div>
+   
+    </section>
+    
+    <!-- a simple perfect place  -->
+    
+    <section class="mx-4 md:mx-6 my-12 md:my-20">
+    
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch mx-auto md:h-[422px]">
+        <!-- Left Section -->
+        <div class="flex flex-col justify-center md:h-[422px]">
+          <p class="text-2xl lg:text-[40px] font-black text-[#131318] mb-6 font-mulish pt-12 leading-[1.3]">
+            A Simple Perfect Place 
+            To Get Lost
+        </p>
+        
+            <p class="text-[#5A5A5D] mb-4 text-[16px] leading-[24px]">
+                Dolor sit amet consectetur. Diam volutpat neque habitasse pharetra odio sit massa. Sodales dictumst nec nibh pellentesque.
+            </p>
+            <ul class="list-disc pl-5 text-[#5A5A5D] mb-4">
+                <li class="mb-2">
+                    Adipiscing ornare pellentesque mauris volutpat tortor vitae platea porta lacus. Lectus suspendisse nullam.
+                </li>
+                <li>
+                    Adipiscing ornare pellentesque mauris volutpat tortor vitae platea porta lacus. Lectus suspendisse nullam.
+                </li>
+            </ul>
+            <button class="text-white font-bold text-lg px-8 py-3 bg-[#FF5400] rounded-lg mt-4 transition hover:bg-[#e04c00] w-52">
+                See More
+            </button>
+        </div>
+    
+        <!-- Right Section (Video) -->
+        <div class="flex justify-center items-center md:h-[422px]">
+            <video controls class="rounded-xl w-full max-w-lg md:h-[422px]">
+                <source src="Images/HTML.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+    
+      
+    </section>
+    
+    <!-- newsletter section -->
+    <section class="mx-4 md:mx-6">
+      <div class=" flex flex-col md:flex-row gap-6 md:h-[422px]">
+        <!-- Newsletter Subscription Box -->
+        <div class="px-4 md:px-8 text-center rounded-xl border-[1px] border-[#FF5400]">
+          <h2 class="text-2xl font-black text-[#131318] mb-4 pt-4 md:pt-6">
+            Subscribe to Our Newsletter
+          </h2>
+          <p class="text-[#5A5A5D] lg:mb-8">Stay updated with our latest news and offers. Sign up today</p>
+          <div class="flex flex-col justify-center items-center gap-4">
+            <!-- Name Input -->
+            <input 
+              type="text" 
+              placeholder="Enter your name" 
+              class="py-4 px-4 w-full md:w-[290px] lg:w-[394px] border rounded-l-lg focus:outline-none bg-[#1313180D] my-4 h-[52px]"
+            />
+            <!-- Email Input -->
+            <input 
+              type="email" 
+              placeholder="Enter your email" 
+              class="py-4 px-4 w-full md:w-[290px] lg:w-[394px] border rounded-l-lg focus:outline-none bg-[#1313180D] h-[52px]"
+            />
+            <!-- Subscribe Button -->
+            <button class="text-[#FFFFFF] font-bold text-xl bg-[#FF5400] rounded-lg px-4 py-3 rounded-r-lg mt-4 mb-8 w-full h-[52px] mt-8">
+              Subscribe
+            </button>
+          </div>
+        </div>
+    
+        <!-- Image with Rotated Banner -->
+        <div class="relative w-full flex justify-center">
+          <!-- Background Image -->
+          <img src="Images/Rectangle 8 (1).png" class=" mx-auto object-cover rounded-xl" />
+    
+          <!-- Rotated Banner -->
+          <div class="absolute bg-[#FF5400] text-[#FFFFFF] w-[210px] h-[80px] sm:w-[216px] sm:h-[80px] md:w-[220px] md:h-[90px] lg:w-[320px] lg:h-[120px] 
+            rounded-lg flex justify-center items-center bottom-[39px] sm:bottom-[40px] left-[33%]  sm:left-[33%]  lg:translate-x-[-50%] 
+            transform rotate-[-27deg] md:bottom-[66px] md:left-[63%] md:translate-x-[-50%] lg:bottom-[80px] lg:left-[65%] lg:translate-x-[-50%]">
+            <h3 class="text-xs sm:text-sm md:text-lg lg:text-xl text-center font-semibold">
+              Travel.com <br />
+              <span class="text-sm sm:text-lg md:text-2xl lg:text-3xl font-black">Save up to 70%</span>
+            </h3>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    
+    <!-- footer section  -->
+    <footer class="footer bg-[#1313180D] flex flex-col items-center justify-center md:mt-8 lg:mt-16 mt-4 lg:py-20 py-4 md:py-8 py-4">
+      <div class="flex flex-row items-center justify-center gap-2">
+        <img src="Images/Group 40071 (2).png" alt="" />
+        <h2 class=" text-2xl font-black">Himchori <span class="text-[#FF5400]">Travel</span></h2>
+      </div>
+      <p class="my-4 mx-[44px] text-center">
+        lorem ipsum dolor sit amet consectetur. Nulla sit viverra morbi vitae
+        blandit orci potenti vulputate.
+        erat maecenas vitae elementum ultricies nullam.
+      </p>
+      <div class="flex flex-row items-center justify-center gap-6 mt-4">
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-facebook-f"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-github"></i>
+
+      </div>
+      <hr />
+      <p class="mt-8">2017, All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
 </html>
